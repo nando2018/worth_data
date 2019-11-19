@@ -1,0 +1,8 @@
+extends layout
+
+block content
+h1 #{profileimage}
+ul.list-group
+each user, i in users
+li.list-group-item
+a(href="/user/"+ profileimage)=user.profileimage

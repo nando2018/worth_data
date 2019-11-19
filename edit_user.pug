@@ -1,0 +1,22 @@
+extends layout
+
+block content
+        h1 #{name}
+        form(method = "POST", action="/users/edit/"+ user._id)
+          #form-group
+            label Name:
+            input.form-control(name= "name", type="text", value = user.name)
+            p
+          #form-group
+            label username:
+            input.form-control(name= "username", type="text", value=user.username)
+            p
+          #form-group
+            label email:
+            input.form-control(name= "email", type="email", value=user.email)
+            p
+          #form-group
+            label Profile Image:
+            input.form-control(name= 'profileImage', type='file') 
+          
+          input.btn.btn.primary(type = "submit", value= "Submit")
