@@ -1,0 +1,8 @@
+extends layout
+
+block content
+  h1 #{filename}
+  ul.list-group
+    each file, i in files
+      li.list-group-item
+        a(href="/image/"+ files._id)=file.filename

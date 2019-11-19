@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  h2.page-header Login
+  p Please login using the form below
+  
+  form(method = 'POST', action='/users/login')
+          #form-group
+            label Username:
+            input.form-control(name= 'username', type='text',
+            placeholder='username')
+            label Password:
+            input.form-control(name= 'password', type='password',
+            placeholder='password')
+            p
+            input.btn.btn.primary(type = 'submit',name='Submi' value= 'Login')
+            p
+  <a href="/users/forgot_password">Forgot Password</a>
