@@ -178,7 +178,7 @@ app.get('/users/register', function (req, res) {
     res.render('register',{title:'Register'})
 })
 
-app.post('/users/register', upload.single('profileimage'), loggedin, function (req, res) {
+app.post('/users/register', upload.single('profileimage'), function (req, res) {
     var name = req.body.name;
     var email = req.body.email;
     var username = req.body.username;
